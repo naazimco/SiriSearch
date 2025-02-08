@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siri Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <noscript>
+        <p>JavaScript is required to use Siri Search. Please enable JavaScript in your browser settings.</p>
+    </noscript>
+    <div class="container">
+        <!-- Header with Apple Logo and Settings Menu -->
+        <div class="header">
+            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer" aria-label="Go to Apple website">
+                <img src="images/apple-logo.png" alt="Apple Logo" class="apple-icon">
+            </a>
+            <div class="control-center">
+                <button class="menu-btn" id="menuButton" aria-label="Open settings menu">
+                    <img src="images/settings-icon.png" alt="Settings" class="settings-icon">
+                </button>
+                <div class="menu-dropdown" id="menuDropdown">
+                    <button class="menu-item" id="darkModeToggle" aria-label="Toggle between light and dark mode">Toggle Appearance</button>
+                    <button class="menu-item" id="aboutModalButton" aria-label="Learn about Siri Search">About  Siri Search</button>
+                    
+                    <!-- Language Dropdown -->
+                    <div class="menu-item language-dropdown">
+                        <button class="language-button" id="languageButton" aria-label="Choose language">
+                            Language <span class="arrow"></span>
+                        </button>
+                        <ul class="language-options" id="languageOptions">
+                            <li>English</li>
+                            <li>Spanish</li>
+                            <li>French</li>
+                            <li>German</li>
+                            <li>Chinese</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centered Content -->
+        <div class="centered-content">
+            <div class="logo-container">
+                <img src="images/siri.png" alt="Siri Logo" class="logo">
+                <h1>Siri Search</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" class="spotlight" placeholder="Search the web">
+            </div>
+            <div class="search-buttons-external">
+                <a href="maps.html" class="search-buttons-external" aria-label="Search Maps">
+                    <img src="images/maps.webp" alt="Maps Icon" class="search-buttons-external-icon"> Search Maps
+                </a>
+                <a href="https://apple.com/search" class="search-buttons-external" aria-label="Search Apple">
+                    <img src="images/store-icon.png" alt="Apple Store Icon" class="search-buttons-external-icon"> Search Apple
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="about-content">
+            <button class="close-button" id="closeModal" aria-label="Close About Siri Search">✕</button>
+            <div class="about-text">
+                <h2>About  Siri Search</h2>
+                <p>
+                    Created by <a href="https://naazim.co">NaazimCo
+                </a> <br/> Inspired by <a href="https://www.behance.net/gallery/106872087/Siri-Search-Engine-Concept">Parker Ortolani's concept.
+                </a> <br/> ©2025 NaazimCo Web Design and Apple Inc <br/> Not affiliated with Apple in any way.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

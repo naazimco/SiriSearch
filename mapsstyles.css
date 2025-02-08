@@ -1,0 +1,453 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SFPro-Display-Regular.woff2') format('woff2'),
+         url('fonts/SFPro-Display-Regular.woff') format('woff'),
+         url('fonts/SFPro-Display-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SFPro-Display-Bold.woff2') format('woff2'),
+         url('fonts/SFPro-Display-Bold.woff') format('woff'),
+         url('fonts/SFPro-Display-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+    .centered-content {
+        padding: 10px;
+    }
+    .search-buttons-external {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --background-color: #3193E3;
+    --spotlight-color: #55acf2;
+    --text-color: #FFFFFF;
+    --button-bg-color: #FFFFFF;
+    --button-hover-bg: #f0f0f0;
+    --button-text-color: #4AA0E6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --icon-size: 25px;
+    --menu-item-bg: #353536;
+    --menu-width: 146px;
+    --menu-item-hover-bg: #717172;
+}
+
+[data-theme="dark"] {
+    --background-color: #092F4D;
+    --spotlight-color: #326E9F;
+    --text-color: #FFFFFF;
+    --button-bg-color: #FFFFFF;
+    --button-hover-bg: #444444;
+    --button-text-color: #4AA0E6;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --menu-item-bg: #333333;
+    --menu-item-hover-bg: #444444;
+}
+
+body {
+    margin: 0;
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header Items */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apple-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    cursor: pointer;
+}
+
+.settings-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+/* Header Items */
+
+.text {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.text:hover {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #800080;
+}
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Control Center */
+.control-center {
+    position: relative;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: var(--menu-item-bg);
+    border-radius: 10px;
+    padding: 10px;
+    width: var(--menu-width);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--menu-item-bg);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: var(--menu-item-hover-bg);
+    color: white;
+}
+/* Control Center */
+
+/* About Siri Search - Control Center */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff; /* White circle */
+    color: #000; /* Black "X" */
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #e6e6e6;
+}
+
+.close-button:focus {
+    outline: none;
+}
+
+.about {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.about.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    z-index: -1;
+}
+
+.about-content {
+    background-color: #fff; /* White modal background */
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 650px;
+    text-align: center;
+    color: #000; /* Black text color */
+    position: relative; /* For close button positioning */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8); /* Shrink slightly */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* Start hidden for animation */
+}
+
+.about.show .about-content {
+    transform: scale(1); /* Normal size */
+    opacity: 1; /* Fully visible */
+}
+
+.about-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #b3b3b3; /* Subtle gray for paragraph text */
+}
+/* About Siri Search - Control Center */
+
+/* Language Options - Control Center */
+.language-dropdown {
+    position: relative;
+}
+
+.language-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.language-button .arrow {
+    margin-left: auto;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    transform: rotate(-45deg);
+    transition: transform 0.3s;
+}
+
+.language-button.open .arrow {
+    transform: rotate(135deg); /* Rotate arrow to indicate expansion */
+}
+
+.language-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background-color: var(--menu-item-bg);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.language-options.show {
+    display: block;
+    padding-top: 10px;
+}
+
+.language-options li {
+    padding: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-options li:hover {
+    background-color: var(--menu-item-hover-bg);
+}
+/* Language Options - Control Center */
+
+/*  Spotlight Bar  */
+.spotlight {	
+    width: 500px;
+    max-width: 600px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--spotlight-color);
+    padding: 0 20px;
+    font-size: 21px;
+    color: var(--text-color);
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.spotlight:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.spotlight::placeholder {
+    color: rgba(255, 255, 255, 1);
+	text-align: left;
+	font-size: 21px;
+}
+/*  Spotlight Bar  */
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Search Buttons (Maps/Apple) */
+.search-buttons-external-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-buttons-external {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 4px 10px;
+    margin: 5px;
+    transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+.search-buttons-external-icon {
+    width: 27px;
+    height: 27px;
+    margin-right: 8px;
+}
+
+.search-buttons-external:hover {
+    color: #007aff; /* Change text color on hover */
+    text-shadow: 0 0 10px #007aff, 0 0 20px #007aff, 0 0 30px #0056cc; /* Add glow effect */
+}
+/* Search Buttons (Maps/Apple) */
+
+
+/* Open Maps Button */
+.open-maps-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--button-text-color);
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.open-maps-button:hover,
+.open-maps-button:focus {
+    background-color: var(--button-hover-bg);
+    color: var(--button-text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.open-maps-icon {
+    width: 24px;
+    height: 24px;
+}
