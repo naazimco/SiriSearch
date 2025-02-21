@@ -12,7 +12,7 @@ A modern search engine with a clean, beautiful UI.
 
 ## Screenshots
 ![macbook_darkmode_promo](https://github.com/user-attachments/assets/b9a4921e-dcdf-4588-b42b-bdf7d68edf0e)
-![macbook_lightmode_placeholder](https://github.com/user-attachments/assets/583ac911-adf4-4bbf-8389-3b573b056972)
+![ipad9thgeb_lightmode_placeholder](https://github.com/user-attachments/assets/377ecf2c-5b7a-43dd-b273-ce2ce4fa4a01)
 ![macbook_lightmode_mapspromo](https://github.com/user-attachments/assets/c43c9e61-5847-408c-bf84-3c2e8ed5b955)
 ![macbook_darkmode_about](https://github.com/user-attachments/assets/bb8db70a-9bf9-411a-b178-8325125b11da)
 ![macbook_lightmode_promo](https://github.com/user-attachments/assets/7eb24d7b-9853-489c-a70d-18219d13bcea)
