@@ -24,7 +24,9 @@ A modern search engine with a clean, beautiful UI.
 - French
 - German
 - Chinese
-  
+
+### Changelog
+v1.0.beta: Added visual toggle for AI Mode, added visual toggle for Appearance, other code optimizations
 --
 
 This project is **not affiliated with Apple** Inc. </br>
