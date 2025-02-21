@@ -15,7 +15,6 @@ A modern search engine with a clean, beautiful UI.
 ![ipad9thgen_lightmode_placeholder](https://github.com/user-attachments/assets/377ecf2c-5b7a-43dd-b273-ce2ce4fa4a01)
 ![macbook_lightmode_mapspromo](https://github.com/user-attachments/assets/c43c9e61-5847-408c-bf84-3c2e8ed5b955)
 ![macbook_darkmode_about](https://github.com/user-attachments/assets/bb8db70a-9bf9-411a-b178-8325125b11da)
-![watch_darkmode_placeholder](https://github.com/user-attachments/assets/c81d4e63-fa78-4242-a365-3f664bc31671)
 ![macbook_lightmode_promo](https://github.com/user-attachments/assets/7eb24d7b-9853-489c-a70d-18219d13bcea)
 
 ## Supported Languages
